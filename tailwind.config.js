@@ -11,12 +11,16 @@ export default {
           dark: "#3A643B",
         },
         darkslategray: {
+          light: "#E7E7EF",
+          200: "#828F9C",
           medium: "#797979",
           dark: "#333333",
+          darkest: "#2E2F2E",
         },
         darkslateblue: {
           light: "#f4f5fa",
         },
+        dimgray: "#646665",
       },
       fontFamily: {
         poppins: "Poppins",
@@ -25,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

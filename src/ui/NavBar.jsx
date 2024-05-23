@@ -10,22 +10,22 @@ export default function NavBar() {
           <div className="flex flex-shrink-0 items-center gap-5 lg:gap-10">
             {/* Main Logo */}
             <img
-              className="hidden h-6 w-auto  lg:block"
-              src="./amrutam-text-logo.png"
+              className=" h-4 w-auto lg:h-6 "
+              src="/amrutam-text-logo.png"
               alt="Amrutam Logo"
             />
             {/* Toggle Button for Sidebar */}
             <img
               onClick={handleSidebarToggle}
               className="h-6 w-5"
-              src="./bar-icon.svg"
+              src="/bar-icon.svg"
               alt="Toggle Sidebar"
             />
             {/* Search Bar */}
             <div className="hidden h-11 items-center  justify-start gap-2 rounded-xl bg-darkOliveGreen-100 px-3 md:flex">
-              <img src="./search-icon.svg" alt="Search Icon" />
+              <img src="/search-icon.svg" alt="Search Icon" />
               <input
-                className=" w-52 bg-transparent  px-2 py-1  font-poppins text-[13px] font-medium leading-5 text-darkOliveGreen-dark placeholder-darkOliveGreen-200 focus:border-none focus:outline-none"
+                className=" w-52 border-none  bg-transparent px-2  py-1 font-poppins text-[13px] font-medium leading-5 text-darkOliveGreen-dark placeholder-darkOliveGreen-200 focus:border-none focus:outline-none focus:ring-0 focus:ring-offset-0"
                 placeholder="Search Here"
               />
             </div>
@@ -33,15 +33,15 @@ export default function NavBar() {
           {/* Right Side of Navbar */}
           <div className="flex h-[2.5rem] flex-shrink-0 items-center gap-3 lg:gap-6">
             {/* Inbox */}
-            <img src="./inbox-icon.svg" className="h-[1.7rem]" alt="Inbox" />
+            <img src="/inbox-icon.svg" className="h-[1.7rem]" alt="Inbox" />
             {/* Notification */}
             <img
-              src="./notification-icon.svg"
+              src="/notification-icon.svg"
               className="h-[1.7rem]"
               alt="Notification"
             />
             {/* Profile */}
-            <div className="flex items-center justify-between gap-2">
+            <div className="hidden items-center justify-between gap-2 lg:flex">
               <div className="flex flex-col justify-between">
                 <h2 className="text-right font-poppins text-[1rem] font-semibold leading-[19.2px] text-darkOliveGreen-dark">
                   Dr. Liam Michael
@@ -51,15 +51,15 @@ export default function NavBar() {
                 </span>
               </div>
               <img
-                src="./profile-icon.png"
+                src="/profile-icon.png"
                 className="h-[2.5rem] w-[2.5rem] rounded-[14px] bg-cover"
                 alt="Profile"
               />
             </div>
             {/* Settings */}
             <img
-              src="./settings-icon.svg"
-              className="h-[1.7rem]"
+              src="/settings-icon.svg"
+              className="hidden h-[1.7rem] lg:block"
               alt="Settings"
             />
           </div>

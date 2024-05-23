@@ -6,6 +6,7 @@ import {
 import AppLayout from "./ui/AppLayout";
 import RoutineDashboard from "./pages/RoutineDashboard";
 import Error from "./ui/Error";
+import AddRoutine from "./ui/AddRoutine";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
         element: <Navigate replace to="/routine" />,
       },
       {
-        path: "routine",
+        path: "/routine",
         element: <RoutineDashboard />,
+      },
+      {
+        path: "/routine/add",
+        element: <AddRoutine />,
       },
     ],
   },

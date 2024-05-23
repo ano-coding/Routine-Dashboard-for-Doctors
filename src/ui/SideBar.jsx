@@ -50,34 +50,20 @@ const SideBar = () => {
       className={` ${isSidebarOpen ? "" : "-ml-60"} flex  h-full w-60 flex-shrink-0 flex-col overflow-hidden rounded-tr-[3rem] bg-white pb-1 pr-[1px] transition-all duration-500 `}
     >
       <div className="custom-scrollbar mt-2  flex h-full flex-col  gap-6 overflow-auto  pl-5">
-        <span className="text-darkslategray-dark font-poppins text-[15px] font-medium leading-[22.5px]">
+        <span className="font-poppins text-[15px] font-medium leading-[22.5px] text-darkslategray-dark">
           Main
         </span>
         <nav className="flex flex-col gap-[1.4rem] py-1">
           {sidebarItems.map((item) => (
             <div key={item.name} className="flex items-center gap-3">
-              <div className="bg-darkslateblue-light flex h-10 w-10  items-center justify-center rounded-lg">
+              <div className="flex h-10 w-10 items-center  justify-center rounded-lg bg-darkslateblue-light">
                 <img
                   className="h-[21px]"
                   alt={item.name}
-                  src={`${item.icon}.svg`}
+                  src={`/${item.icon}.svg`}
                 />
               </div>
-              <span className="text-darkslategray-medium font-poppins text-[15px] font-medium leading-[22.5px]">
-                {item.name}
-              </span>
-            </div>
-          ))}
-          {sidebarItems.map((item) => (
-            <div key={item.name} className="flex items-center gap-3">
-              <div className="bg-darkslateblue-light flex h-10 w-10  items-center justify-center rounded-lg">
-                <img
-                  className="h-[21px]"
-                  alt={item.name}
-                  src={`${item.icon}.svg`}
-                />
-              </div>
-              <span className="text-darkslategray-medium font-poppins text-[15px] font-medium leading-[22.5px]">
+              <span className="font-poppins text-[15px] font-medium leading-[22.5px] text-darkslategray-medium">
                 {item.name}
               </span>
             </div>
