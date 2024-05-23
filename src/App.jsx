@@ -7,6 +7,7 @@ import AppLayout from "./ui/AppLayout";
 import RoutineDashboard from "./pages/RoutineDashboard";
 import Error from "./ui/Error";
 import AddRoutine from "./ui/AddRoutine";
+import PatientProfile from "./ui/PatientProfile";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Navigate replace to="/routine" />,
+      },
+      {
+        path: "/patient/:id",
+        element: <PatientProfile />,
       },
       {
         path: "/routine",

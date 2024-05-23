@@ -41,6 +41,7 @@ const patients = [
     time: "04 : 10 PM",
     type: "Video Call",
     concerns: "Knee Pain",
+    id: "1",
   },
   {
     name: "Smith Bruklin",
@@ -50,6 +51,7 @@ const patients = [
     time: "05 : 10 PM",
     type: "Chat",
     concerns: "Headache",
+    id: "2",
   },
   {
     name: "William Stephin",
@@ -59,6 +61,7 @@ const patients = [
     time: "06 : 10 PM",
     type: "Offline",
     concerns: "Stomachache",
+    id: "3",
   },
 ];
 
@@ -199,7 +202,7 @@ const RoutineDashboard = () => {
                   <thead>
                     <tr>
                       <th scope="col" className="relative px-6 py-3">
-                        <span className="sr-only">Edit</span>
+                        <span className="sr-only">Checkbox</span>
                       </th>
                       <th
                         scope="col"
@@ -238,7 +241,7 @@ const RoutineDashboard = () => {
                         Concerns
                       </th>
                       <th scope="col" className="relative px-6 py-3">
-                        <span className="sr-only">Edit</span>
+                        <span className="sr-only">Link</span>
                       </th>
                     </tr>
                   </thead>
@@ -276,12 +279,15 @@ const RoutineDashboard = () => {
                           {patient.concerns}
                         </td>
                         <td className="whitespace-nowrap px-6 py-3 text-right text-xs font-medium">
-                          <button className="flex h-[37px] w-[37px] items-center  justify-center rounded-xl bg-darkslateblue-light">
+                          <Link
+                            to={`/patient/${patient.id}`}
+                            className="flex h-[37px] w-[37px] items-center  justify-center rounded-xl bg-darkslateblue-light"
+                          >
                             <img
                               src="/right-arrow.svg"
                               alt="Right Arrow Icon"
                             />
-                          </button>
+                          </Link>
                         </td>
                       </tr>
                     ))}
