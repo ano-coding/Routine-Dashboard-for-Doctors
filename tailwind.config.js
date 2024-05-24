@@ -8,11 +8,13 @@ export default {
         darkOliveGreen: {
           100: "#f5f7f5",
           150: "#eaf2ea",
+          175: "#E9F1E0",
           200: "rgba(58, 100, 59, 0.5)",
           dark: "#3A643B",
         },
         darkslategray: {
           light: "#E7E7EF",
+          100: "#A0A0A0",
           200: "#828F9C",
           medium: "#797979",
           dark: "#333333",
