@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PatientProfile = () => {
   const PATIENT_DETAILS = {
     name: "Williams Stephin",
@@ -152,9 +154,12 @@ const PatientProfile = () => {
         <div className="font-poppins text-[16px] leading-[21px] text-black">
           Unable to find a perfect routine for Williams?
         </div>
-        <button className="box-border rounded-md bg-darkOliveGreen-dark px-6 py-2  text-center font-poppins text-[14px]  leading-[21px] text-white">
+        <Link
+          to={`/routine/create`}
+          className="box-border rounded-md bg-darkOliveGreen-dark px-6 py-2 text-center font-poppins text-[14px]  capitalize leading-[21px] text-white"
+        >
           Create a new routine
-        </button>
+        </Link>
         <div className="mt-2 text-center font-poppins text-[14px] font-medium leading-[21px] text-darkOliveGreen-dark">
           Learn more about routine
         </div>

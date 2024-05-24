@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AddRoutine = () => {
   return (
     <section
@@ -12,9 +14,12 @@ const AddRoutine = () => {
       </div>
       <div className=" mt-1 flex h-3/4 w-full items-center justify-center rounded-xl bg-white">
         <div className="flex w-72 flex-col gap-4">
-          <button className="whitespace-nowrap rounded-xl bg-darkOliveGreen-dark px-4 py-[10px] font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-white ">
+          <Link
+            to={`/routine/create`}
+            className="whitespace-nowrap rounded-xl bg-darkOliveGreen-dark px-4 py-[10px] text-center font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-white"
+          >
             Create New Routine
-          </button>
+          </Link>
           <ul className="ml-2 list-inside list-disc whitespace-nowrap font-poppins text-[15px] leading-[24px] tracking-[-0.01em] text-neutral-500">
             <li>New Personalized templates</li>
             <li>Add upto 7 reminders</li>

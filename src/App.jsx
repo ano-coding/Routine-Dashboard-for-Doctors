@@ -8,6 +8,7 @@ import RoutineDashboard from "./pages/RoutineDashboard";
 import Error from "./ui/Error";
 import AddRoutine from "./ui/AddRoutine";
 import PatientProfile from "./ui/PatientProfile";
+import CreateRoutine from "./ui/CreateRoutine";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/routine/add",
         element: <AddRoutine />,
+      },
+      {
+        path: "/routine/create",
+        element: <CreateRoutine />,
       },
     ],
   },
