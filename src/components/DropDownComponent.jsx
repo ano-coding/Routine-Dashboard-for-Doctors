@@ -12,7 +12,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function SimpleDropDownComponent({ label, list, mdWidth }) {
+export default function SimpleDropDownComponent({
+  label,
+  list,
+  mdWidth,
+  placeholder,
+}) {
   const [selected, setSelected] = useState();
   return (
     <Menu as="div" className={`relative inline-block text-left md:${mdWidth}`}>
@@ -29,8 +34,8 @@ export default function SimpleDropDownComponent({ label, list, mdWidth }) {
             name="name"
             id="name"
             value={selected}
-            className="block w-full select-none  border-0 p-0 py-1.5 font-poppins text-[16px] leading-[24px] text-black placeholder-neutral-400 caret-transparent placeholder:text-sm focus:ring-0"
-            placeholder="Example: Lifestyle, Fitness, etc."
+            className="block w-full select-none border-0  p-0 py-1.5 pl-1 font-poppins text-[16px] leading-[24px] text-black placeholder-neutral-400 caret-transparent placeholder:text-sm focus:ring-0"
+            placeholder={placeholder}
           />
           <img className="mr-2" src="/dropdown-icon.svg" alt="DropDown Icon" />
         </div>
@@ -45,7 +50,7 @@ export default function SimpleDropDownComponent({ label, list, mdWidth }) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <MenuItems className="absolute right-0 mr-2 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg shadow-blue-ice ring-1 ring-blue-ice ring-opacity-5 focus:outline-none">
+        <MenuItems className="absolute right-0 z-30 mr-2 mt-2 w-3/5 origin-top-right rounded-md bg-white shadow-lg shadow-blue-ice ring-1 ring-blue-ice ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {list.map((item) => (
               <MenuItem key={item}>
