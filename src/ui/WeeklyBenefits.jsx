@@ -1,3 +1,4 @@
+import Breadcrumb from "../components/Breadcrumb";
 import SimpleDropDownComponent from "../components/DropDownComponent";
 import TextAreaWithAddMore from "../components/TextAreaWithAddMore";
 
@@ -6,28 +7,20 @@ const WeeklyBenefits = () => {
     <section
       className={`mx-auto flex h-full max-w-7xl flex-col gap-[1.9rem]   rounded-xl  px-5`}
     >
-      <div className="flex w-full items-center  gap-[10px]   font-poppins text-[15px] font-medium leading-[22.5px] ">
-        <div className="font-medium  leading-[22.5px] text-neutral-500">
-          Routine
-        </div>
-        <div className=" text-[20px] font-medium leading-[22.5px] text-neutral-500">{`<`}</div>
-        <div className="font-medium  leading-[22.5px] text-neutral-500">
-          Add New Routine
-        </div>
-        <div className="text-[20px] font-medium leading-[22.5px] text-darkOliveGreen-dark">{`<`}</div>
-        <div className="font-semibold leading-[22.5px] text-darkOliveGreen-dark">
-          Add Weekly Benefits
-        </div>
-      </div>
+      <Breadcrumb
+        list={["Routine", "Add New Routine", "Add Weekly Benefits"]}
+      />
       <div className="mb-2 flex w-full flex-col gap-10 rounded-xl bg-white px-5 py-4 lg:pr-16">
-        <div className="font-poppins text-[22px] text-black">
-          Add Weekly Benefits
-        </div>
-        <div className="flex items-center gap-3">
-          <img src={`/bi-question.svg`} />
-          <div className="font-dm-sans text-[14px] text-darkOliveGreen-dark">
-            This weekly benefit will help potential users track their weekly
-            progress while using this routine.
+        <div className="flex flex-col gap-5">
+          <div className="font-poppins text-[22px] text-black">
+            Add Weekly Benefits
+          </div>
+          <div className="flex items-center gap-3">
+            <img src={`/bi-question.svg`} />
+            <div className="font-dm-sans text-[14px] text-darkOliveGreen-dark">
+              This weekly benefit will help potential users track their weekly
+              progress while using this routine.
+            </div>
           </div>
         </div>
         <div className="font-dm-sans text-[16px] font-medium text-black">

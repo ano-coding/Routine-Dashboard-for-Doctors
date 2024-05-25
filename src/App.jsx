@@ -10,6 +10,7 @@ import AddRoutine from "./ui/AddRoutine";
 import PatientProfile from "./ui/PatientProfile";
 import CreateRoutine from "./ui/CreateRoutine";
 import WeeklyBenefits from "./ui/WeeklyBenefits";
+import ProductDetails from "./ui/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +38,12 @@ const router = createBrowserRouter([
         element: <CreateRoutine />,
       },
       {
-        path: "/routine/create/weekly-benefits/",
+        path: "/routine/create/weekly-benefits",
         element: <WeeklyBenefits />,
+      },
+      {
+        path: "/routine/create/add-reminder/product-details",
+        element: <ProductDetails />,
       },
     ],
   },
