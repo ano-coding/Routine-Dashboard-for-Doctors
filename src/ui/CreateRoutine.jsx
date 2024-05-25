@@ -33,7 +33,7 @@ const CreateRoutine = () => {
 
   return (
     <section
-      className={` mx-auto flex h-full max-w-7xl flex-col gap-[1.9rem]   rounded-xl  px-5  `}
+      className={`mx-auto flex h-full max-w-7xl flex-col gap-[1.9rem]   rounded-xl  px-5`}
     >
       <div className="flex  w-full  gap-[10px]   font-poppins text-[15px] font-medium leading-[22.5px] text-darkOliveGreen-dark">
         <div className="font-medium  leading-[22.5px] text-neutral-500">
