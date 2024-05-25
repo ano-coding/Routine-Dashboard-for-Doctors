@@ -3,6 +3,7 @@ import SimpleDropDownComponent from "../components/DropDownComponent";
 import AddConvenience from "../components/AddConvenience";
 import DisplayCardSmall from "../components/DisplayCardSmall";
 import PhotoUploader from "../components/PhotoUploader";
+import SingleLineInput from "../components/SingleLineInput";
 
 const THUMBNAILS = [
   "hair-care-1.jpg",
@@ -48,27 +49,12 @@ const CreateRoutine = () => {
         <div className="font-poppins text-[22px] text-black">
           Create Routine
         </div>
-        <div className="flex flex-col gap-1">
-          <div className="relative rounded-[16px]  border-[1.5px] border-blue-ice px-3 py-2 shadow-sm md:w-[400px]">
-            <label
-              htmlFor="concerns"
-              className="absolute -top-2 left-2 -mt-px inline-block bg-white px-1 font-poppins text-[12px]  leading-[16px] text-neutral-400"
-            >
-              Routine Name
-            </label>
-
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="block w-full border-0 p-0 py-1.5 font-poppins text-[16px] leading-[24px] text-black placeholder-neutral-400 focus:ring-0"
-              placeholder="Hair Care Routine"
-            />
-          </div>
-          <div className="w-full pl-3 font-poppins text-[12px] leading-[16px] text-neutral-400">
-            This will be displayed as your Routine name.
-          </div>
-        </div>
+        <SingleLineInput
+          label={`Routine Name`}
+          placeholder={"Hair Care Routine"}
+          helpText={`This will be displayed as your Routine name.`}
+          mdWidth={"400"}
+        />
         <div className="flex flex-col gap-1">
           <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
             <PhotoUploader />
