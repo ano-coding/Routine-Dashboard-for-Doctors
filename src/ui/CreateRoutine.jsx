@@ -2,6 +2,7 @@ import { useState } from "react";
 import SimpleDropDownComponent from "../components/DropDownComponent";
 import AddConvenience from "../components/AddConvenience";
 import DisplayCardSmall from "../components/DisplayCardSmall";
+import PhotoUploader from "../components/PhotoUploader";
 
 const THUMBNAILS = [
   "hair-care-1.jpg",
@@ -14,7 +15,7 @@ const THUMBNAILS = [
 const REMINDER_CHANNELS = ["SMS", "WhatsApp", "Email"];
 
 const CreateRoutine = () => {
-  const [selectedThumbnail, setSelectedThumbnail] = useState();
+  const [selectedThumbnail, setSelectedThumbnail] = useState(null);
 
   // Add Bullet point on Tab key press
   const [value, setValue] = useState("");
@@ -70,16 +71,7 @@ const CreateRoutine = () => {
         </div>
         <div className="flex flex-col gap-1">
           <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
-            <div className="h-[210px] w-[210px]  shrink-0 rounded-2xl bg-[url('/uploader.svg')] bg-center  bg-no-repeat">
-              <div className="flex h-full w-full flex-col items-center justify-center gap-[8px] font-poppins text-[14px] text-black">
-                <img
-                  className="h-[52px] w-[52px] shrink-0 overflow-hidden"
-                  alt="Photo Frame"
-                  src="/photo-frame.svg"
-                />
-                <div className="">Upload Image</div>
-              </div>
-            </div>
+            <PhotoUploader />
             <div className=" flex items-center gap-[8px]  font-dm-sans  text-[14px] sm:flex-col">
               <div className="h-[0.8px] w-[71px] bg-darkOliveGreen-200 sm:h-[71px] sm:w-[0.8px]" />
               <div className="font-medium leading-[24px] tracking-[-0.01em] text-neutral-500">
@@ -95,7 +87,13 @@ const CreateRoutine = () => {
                 {THUMBNAILS.map((thumbnail) => (
                   <span
                     key={thumbnail}
-                    onClick={() => setSelectedThumbnail(thumbnail)}
+                    onClick={() => {
+                      if (selectedThumbnail === thumbnail) {
+                        setSelectedThumbnail(null);
+                      } else {
+                        setSelectedThumbnail(thumbnail);
+                      }
+                    }}
                     className={`relative z-10 box-border shrink-0  cursor-pointer rounded-lg border-[0.14rem] border-solid ${selectedThumbnail === thumbnail ? ` border-darkOliveGreen-dark` : "border-transparent"}`}
                   >
                     <img
