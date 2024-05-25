@@ -1,12 +1,9 @@
 const Breadcrumb = ({ list }) => {
   return (
-    <div className="flex w-full items-center  gap-[10px]   font-poppins text-[15px] font-medium leading-[22.5px] ">
+    <div className="flex w-full  items-center   gap-[10px] font-poppins text-[15px] font-medium leading-[22.5px] ">
       {list.map((item, i) => (
-        <>
-          <div
-            key={item}
-            className={`font-medium  leading-[22.5px] text-neutral-500`}
-          >
+        <div key={item} className="flex  items-center gap-[10px]">
+          <div className={`font-medium  leading-[22.5px] text-neutral-500`}>
             <span
               className={
                 list.length === i + 1
@@ -24,7 +21,7 @@ const Breadcrumb = ({ list }) => {
           ) : (
             ""
           )}
-        </>
+        </div>
       ))}
     </div>
   );

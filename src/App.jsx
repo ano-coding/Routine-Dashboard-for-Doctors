@@ -11,6 +11,7 @@ import PatientProfile from "./ui/PatientProfile";
 import CreateRoutine from "./ui/CreateRoutine";
 import WeeklyBenefits from "./ui/WeeklyBenefits";
 import ProductDetails from "./ui/ProductDetails";
+import ReminderChannel from "./ui/ReminderChannel";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/routine/create/add-reminder/product-details",
         element: <ProductDetails />,
+      },
+      {
+        path: "/routine/create/add-reminder-channels",
+        element: <ReminderChannel />,
       },
     ],
   },

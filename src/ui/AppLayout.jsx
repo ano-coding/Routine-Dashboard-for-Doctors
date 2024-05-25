@@ -23,7 +23,7 @@ const AppLayout = () => {
         >
           <SideBar />
           <div
-            className=" w-full overflow-auto"
+            className=" h-full w-full overflow-auto"
             style={{ scrollbarWidth: "thin" }}
           >
             <Outlet />
