@@ -12,6 +12,7 @@ import CreateRoutine from "./ui/CreateRoutine";
 import WeeklyBenefits from "./ui/WeeklyBenefits";
 import ProductDetails from "./ui/ProductDetails";
 import ReminderChannel from "./ui/ReminderChannel";
+import AssignCaregiver from "./ui/AssignCaregiver";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/routine/create/add-reminder-channels",
         element: <ReminderChannel />,
+      },
+      {
+        path: "/routine/create/assign-caregiver",
+        element: <AssignCaregiver />,
       },
     ],
   },
