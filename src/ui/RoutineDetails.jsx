@@ -92,7 +92,7 @@ const RoutineDetails = () => {
   const [isReadMore, setIsReadMore] = useState(false);
   return (
     <section
-      className={`mx-auto flex h-full max-w-7xl flex-col items-center  gap-[1.9rem] rounded-xl  px-5`}
+      className={`mx-auto mb-5 flex min-h-full max-w-7xl flex-col  items-center gap-[1.9rem] rounded-xl  px-5`}
     >
       <Breadcrumb list={["Routine", "Routine Details"]} />
       <div className="flex w-full flex-col gap-8 rounded-xl bg-white px-5 py-4 lg:pr-16">

@@ -24,7 +24,7 @@ const REMINDER_CHANNELS = [
 const ReminderChannel = () => {
   return (
     <section
-      className={`mx-auto flex h-full max-w-7xl flex-col items-center  gap-[1.9rem] rounded-xl  px-5`}
+      className={`mx-auto mb-5 flex min-h-full max-w-7xl flex-col items-center  gap-[1.9rem] rounded-xl  px-5`}
     >
       <Breadcrumb
         list={["Routine", "Add New Routine", "Add Reminder Channels"]}

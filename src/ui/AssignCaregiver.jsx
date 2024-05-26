@@ -1,7 +1,9 @@
+import { useState } from "react";
 import AddMoreButton from "../components/AddMoreButton";
 import Breadcrumb from "../components/Breadcrumb";
+import ModalWindow from "../components/ModalWindow";
 
-const CaregiverCard = ({ name, image, description }) => {
+const CaregiverCard = ({ name, image, description, onClick }) => {
   return (
     <div className=" flex justify-between">
       <div className="flex justify-between gap-[10px]">
@@ -19,15 +21,17 @@ const CaregiverCard = ({ name, image, description }) => {
           </div>
         </div>
       </div>
-      <AddMoreButton label="Add" />
+      <AddMoreButton onClick={onClick} label="Add" />
     </div>
   );
 };
 
 const AssignCaregiver = () => {
+  const [open, setOpen] = useState(false);
+  const openModal = () => setOpen(true);
   return (
     <section
-      className={`mx-auto flex h-full max-w-7xl flex-col items-center  gap-[1.9rem] rounded-xl  px-5`}
+      className={`mx-auto flex min-h-full max-w-7xl flex-col items-center  gap-[1.9rem] rounded-xl  px-5`}
     >
       <Breadcrumb list={["Routine", "Add New Routine", "Assign Caregiver"]} />
       <div className="flex w-full flex-col gap-6 rounded-xl bg-white px-5 py-4 lg:pr-16">
@@ -49,17 +53,20 @@ const AssignCaregiver = () => {
             image="/person3.png"
             name="Dr. Pooja"
             description="Recent Consultation"
+            onClick={openModal}
           />
           <CaregiverCard
             image={"/person2.png"}
             name={"Sister <3"}
             description={"Recent Caregiver"}
+            onClick={openModal}
           />
         </div>
         <button className="mx-auto my-16 box-border rounded-xl border-[1.5px] border-solid  border-darkOliveGreen-dark px-16  py-[17px]  text-center text-base font-semibold text-darkOliveGreen-dark shadow-md md:w-[23.4rem]">
           Invite Your Friend
         </button>
       </div>
+      <ModalWindow open={open} setOpen={setOpen} />
     </section>
   );
 };

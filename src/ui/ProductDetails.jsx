@@ -5,7 +5,7 @@ import SingleLineInput from "../components/SingleLineInput";
 const ProductDetails = () => {
   return (
     <section
-      className={`mx-auto flex h-full max-w-7xl flex-col gap-[1.9rem]   rounded-xl  px-5`}
+      className={`mx-auto mb-5 flex min-h-full max-w-7xl flex-col gap-[1.9rem]   rounded-xl  px-5`}
     >
       <Breadcrumb
         list={["Routine", "Add New Routine", "Add Reminder", "Add Product"]}

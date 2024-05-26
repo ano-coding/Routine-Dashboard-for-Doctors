@@ -1,6 +1,9 @@
-const AddMoreButton = ({ label = "Add More" }) => {
+const AddMoreButton = ({ label = "Add More", onClick }) => {
   return (
-    <div className="flex items-center gap-[10px]">
+    <div
+      onClick={onClick}
+      className="flex cursor-pointer items-center gap-[10px]"
+    >
       <img className="h-[26px]" src="/add-icon-plus.svg" />
       <div className="font-dm-sans text-[14px] font-medium tracking-[-0.02em] text-darkOliveGreen-dark">
         {label}
