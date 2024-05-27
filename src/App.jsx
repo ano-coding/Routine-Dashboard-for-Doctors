@@ -14,6 +14,7 @@ import ProductDetails from "./ui/ProductDetails";
 import ReminderChannel from "./ui/ReminderChannel";
 import AssignCaregiver from "./ui/AssignCaregiver";
 import RoutineDetails from "./ui/RoutineDetails";
+import AddReminder from "./ui/AddReminder";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/routine/create/weekly-benefits",
         element: <WeeklyBenefits />,
+      },
+      {
+        path: "/routine/create/add-reminder",
+        element: <AddReminder />,
       },
       {
         path: "/routine/create/add-reminder/product-details",

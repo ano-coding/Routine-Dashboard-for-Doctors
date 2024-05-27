@@ -1,8 +1,14 @@
-const SingleLineInput = ({ label, placeholder, helpText, mdWidth }) => {
+const SingleLineInput = ({
+  label,
+  placeholder,
+  helpText,
+  className,
+  mdWidth,
+}) => {
   return (
     <div className="flex flex-col gap-1">
       <div
-        className={`relative rounded-[16px]  border-[1.5px] border-blue-ice px-3 py-2 shadow-sm md:w-[${mdWidth}px]`}
+        className={`relative rounded-[16px] ${className}  border-[1.5px] border-blue-ice px-3 py-2 shadow-sm md:w-[${mdWidth}px]`}
       >
         <label
           htmlFor="concerns"

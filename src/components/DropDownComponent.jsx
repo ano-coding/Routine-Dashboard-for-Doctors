@@ -17,10 +17,14 @@ export default function SimpleDropDownComponent({
   list,
   mdWidth,
   placeholder,
+  className,
 }) {
   const [selected, setSelected] = useState();
   return (
-    <Menu as="div" className={`relative inline-block text-left md:${mdWidth}`}>
+    <Menu
+      as="div"
+      className={`relative ${className} inline-block text-left md:${mdWidth}`}
+    >
       <MenuButton className="relative w-full  rounded-[16px] border-[1.5px] border-blue-ice px-3 py-2 shadow-sm">
         <label
           htmlFor="concerns"
