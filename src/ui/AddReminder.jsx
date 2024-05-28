@@ -10,6 +10,7 @@ import {
   Controller,
 } from "react-hook-form";
 import AddMoreButton from "../components/AddMoreButton";
+import { Link } from "react-router-dom";
 
 const CustomCheckbox = ({ id }) => {
   const { control } = useFormContext();
@@ -235,9 +236,11 @@ const ProductDetails = () => {
             mdWidth="w-[400px]"
             placeholder="Select Product"
           />
-          <div className="ml-5 font-poppins text-[12px] font-medium leading-[16px] text-darkOliveGreen-dark">
-            Unable to find product? Add your Product
-          </div>
+          <Link to="product-details">
+            <div className="ml-5 font-poppins text-[12px] font-medium leading-[16px] text-darkOliveGreen-dark">
+              Unable to find product? Add your Product
+            </div>
+          </Link>
         </div>
         <SimpleDropDownComponent
           label="Product Type"

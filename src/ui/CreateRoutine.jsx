@@ -162,6 +162,7 @@ const CreateRoutine = () => {
         </div>
         <div className="flex flex-col gap-4">
           <AddConvenience
+            link={"add-reminder"}
             title="Add Reminder Items"
             subtitle="Add Items for your Routine"
           />
@@ -182,10 +183,12 @@ const CreateRoutine = () => {
           <AddConvenience
             title="Add Weekly Benefits"
             subtitle="Add weekly benefits of this Routine so that users can tally the progress"
+            link="weekly-benefits"
           />
         </div>
         <div className="flex flex-col gap-4">
           <AddConvenience
+            link="add-reminder-channels"
             title="Add Reminder Channels"
             subtitle="We will notify you about your Routine using channels."
           />
@@ -205,6 +208,7 @@ const CreateRoutine = () => {
         </div>
         <div className="flex flex-col gap-4">
           <AddConvenience
+            link="assign-caregiver"
             title="Assign a Caregiver"
             subtitle="We will keep updating caregiver about your Routine."
           />

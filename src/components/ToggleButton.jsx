@@ -6,8 +6,6 @@ function classNames(...classes) {
 }
 
 export default function ToggleButton({ isActive }) {
-  console.log(isActive);
-
   const [enabled, setEnabled] = useState(() => isActive || false);
 
   return (
