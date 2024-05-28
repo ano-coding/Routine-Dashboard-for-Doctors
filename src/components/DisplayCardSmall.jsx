@@ -1,6 +1,6 @@
 const DisplayCardSmall = ({ title, img, tag }) => {
   return (
-    <div className="flex gap-2 rounded-2xl border-[1px] border-solid border-neutral-200 px-[10px] py-[10px] md:w-[342px]">
+    <div className="flex gap-2 rounded-2xl border-[1px] border-solid border-neutral-200 px-[10px] py-[10px] hover:shadow-lg hover:shadow-neutral-100 md:w-[342px]">
       <img
         className="h-[100px] w-[100px] rounded-lg object-cover"
         src={`/${img}`}

@@ -126,7 +126,7 @@ const PatientProfile = () => {
             >
               <img
                 src={`/${routine.image}`}
-                className=" h-[7.5rem] w-[5rem] rounded-lg object-cover lg:w-[7.25rem]"
+                className="h-[7.5rem] w-[5rem] rounded-lg object-cover transition-all duration-500 hover:opacity-80 lg:w-[7.25rem]"
               />
               <div className="flex flex-1 flex-col  ">
                 <div className="gap flex flex-1 flex-col gap-[0.65rem]">
@@ -141,7 +141,7 @@ const PatientProfile = () => {
                   </div>
                 </div>
                 <div className="w-full">
-                  <button className="w-full flex-1 whitespace-nowrap rounded-lg border-[1.5px] border-solid border-darkOliveGreen-dark  py-[9px] text-center font-nunito text-base font-semibold leading-[20px] tracking-[-0.01em] text-darkOliveGreen-dark shadow-sm shadow-darkOliveGreen-dark">
+                  <button className="hover:bg-whitesmoke-100 w-full flex-1 whitespace-nowrap rounded-lg border-[1.5px] border-solid  border-darkOliveGreen-dark py-[9px] text-center font-nunito text-base font-semibold leading-[20px] tracking-[-0.01em] text-darkOliveGreen-dark shadow-sm shadow-darkOliveGreen-dark duration-100 active:scale-95">
                     Assign Routine
                   </button>
                 </div>
@@ -156,7 +156,7 @@ const PatientProfile = () => {
         </div>
         <Link
           to={`/routine/create`}
-          className="box-border rounded-md bg-darkOliveGreen-dark px-6 py-2 text-center font-poppins text-[14px]  capitalize leading-[21px] text-white"
+          className="hover:bg-darkOliveGreen-800 box-border rounded-md bg-darkOliveGreen-dark px-6 py-2 text-center font-poppins  text-[14px] capitalize leading-[21px] text-white duration-100 active:scale-95"
         >
           Create a new routine
         </Link>

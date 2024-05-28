@@ -43,7 +43,10 @@ const WeeklyBenefits = () => {
           <TextAreaWithAddMore label="2-4 Week Benefits" />
           <TextAreaWithAddMore label="4-6 Week Benefits" />
         </div>
-        <button className="mx-auto my-10 box-border rounded-xl bg-darkOliveGreen-dark px-16   py-[17px]  text-center text-base font-semibold text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] md:w-[23.4rem]">
+        <button
+          className="hover:bg-darkOliveGreen-800 mx-auto my-10 box-border rounded-xl bg-darkOliveGreen-dark   px-16  py-[17px] text-center text-base font-semibold text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] duration-100 active:scale-95 md:w-[23.4rem]
+"
+        >
           Save Benefits
         </button>
       </div>

@@ -62,7 +62,10 @@ const AssignCaregiver = () => {
             onClick={openModal}
           />
         </div>
-        <button className="mx-auto my-16 box-border rounded-xl border-[1.5px] border-solid  border-darkOliveGreen-dark px-16  py-[17px]  text-center text-base font-semibold text-darkOliveGreen-dark shadow-md md:w-[23.4rem]">
+        <button
+          className="hover:bg-whitesmoke-100 mx-auto my-16 box-border rounded-xl border-[1.5px]  border-solid border-darkOliveGreen-dark  px-16  py-[17px] text-center text-base font-semibold text-darkOliveGreen-dark shadow-md duration-100 active:scale-95 md:w-[23.4rem]
+"
+        >
           Invite Your Friend
         </button>
       </div>

@@ -80,7 +80,7 @@ const CreateRoutine = () => {
                         setSelectedThumbnail(thumbnail);
                       }
                     }}
-                    className={`relative z-10 box-border shrink-0  cursor-pointer rounded-lg border-[0.14rem] border-solid ${selectedThumbnail === thumbnail ? ` border-darkOliveGreen-dark` : "border-transparent"}`}
+                    className={`relative z-10 box-border shrink-0  cursor-pointer rounded-lg border-[0.14rem] border-solid hover:border-darkOliveGreen-dark ${selectedThumbnail === thumbnail ? ` border-darkOliveGreen-dark` : "border-transparent"}`}
                   >
                     <img
                       className="h-14 w-14 shrink-0 rounded-lg object-cover"
@@ -213,7 +213,7 @@ const CreateRoutine = () => {
             subtitle="We will keep updating caregiver about your Routine."
           />
           <div className="flex flex-col flex-wrap gap-4 sm:flex-row sm:gap-10 md:gap-16">
-            <div className="flex gap-2 rounded-2xl border-[1px] border-solid border-neutral-200 px-[10px] py-[10px] md:w-[342px]">
+            <div className="flex gap-2 rounded-2xl border-[1px] border-solid border-neutral-200 px-[10px] py-[10px] hover:shadow-md hover:shadow-neutral-100 md:w-[342px]">
               <img
                 className="h-[100px] w-[100px] rounded-lg object-cover"
                 src="/person4.png"
@@ -249,7 +249,10 @@ const CreateRoutine = () => {
             </div>
           </div>
         </div>
-        <button className="mx-auto my-10 box-border rounded-xl bg-darkOliveGreen-dark px-16   py-[17px]  text-center text-base font-semibold text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] md:w-[23.4rem]">
+        <button
+          className="mx-auto my-10 box-border rounded-xl bg-darkOliveGreen-dark px-16   py-[17px]  text-center text-base font-semibold text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] duration-100 hover:bg-darkOliveGreen-800 active:scale-95 md:w-[23.4rem]
+"
+        >
           Proceed
         </button>
       </div>

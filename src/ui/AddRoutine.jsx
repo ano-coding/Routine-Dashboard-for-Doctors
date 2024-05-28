@@ -16,7 +16,7 @@ const AddRoutine = () => {
         <div className="flex w-72 flex-col gap-4">
           <Link
             to={`/routine/create`}
-            className="whitespace-nowrap rounded-xl bg-darkOliveGreen-dark px-4 py-[10px] text-center font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-white"
+            className="hover:bg-darkOliveGreen-800 whitespace-nowrap rounded-xl bg-darkOliveGreen-dark px-4 py-[10px] text-center font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-white duration-100 active:scale-95"
           >
             Create New Routine
           </Link>
@@ -31,7 +31,10 @@ const AddRoutine = () => {
             </span>
             <div className="h-0.5 w-[70px] bg-darkOliveGreen-200" />
           </div>
-          <button className="whitespace-nowrap rounded-xl border-[1.5px] border-darkOliveGreen-dark px-4 py-[10px] font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-darkOliveGreen-dark ">
+          <button
+            className="hover:bg-whitesmoke-100 whitespace-nowrap rounded-xl border-[1.5px] border-darkOliveGreen-dark px-4 py-[10px] font-poppins text-[16px] font-medium leading-[24px] tracking-[-0.01em] text-darkOliveGreen-dark duration-100 active:scale-95
+"
+          >
             Duplicate And Edit
           </button>
           <ul className="ml-2 list-inside list-disc whitespace-nowrap font-poppins text-[15px] leading-[24px] tracking-[-0.01em] text-neutral-500">

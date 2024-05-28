@@ -1,3 +1,4 @@
+import { ReactSVG } from "react-svg";
 import useSidebarToggle from "../hooks/useSidebarToggle";
 
 export default function NavBar() {
@@ -15,17 +16,17 @@ export default function NavBar() {
               alt="Amrutam Logo"
             />
             {/* Toggle Button for Sidebar */}
-            <img
+            <ReactSVG
               onClick={handleSidebarToggle}
-              className="h-6 w-5"
+              className="icon-hover-effect h-6 w-5 duration-100 active:scale-90"
               src="/bar-icon.svg"
               alt="Toggle Sidebar"
             />
             {/* Search Bar */}
-            <div className="hidden h-11 items-center  justify-start gap-2 rounded-xl bg-darkOliveGreen-100 px-3 md:flex">
+            <div className="group hidden h-11 items-center justify-start  gap-2 rounded-xl bg-darkOliveGreen-100 px-3 hover:bg-darkOliveGreen-150 md:flex">
               <img src="/search-icon.svg" alt="Search Icon" />
               <input
-                className=" w-52 border-none  bg-transparent px-2  py-1 font-poppins text-[13px] font-medium leading-5 text-darkOliveGreen-dark placeholder-darkOliveGreen-200 focus:border-none focus:outline-none focus:ring-0 focus:ring-offset-0"
+                className=" w-52 border-none bg-transparent  px-2 py-1  font-poppins text-[13px] font-medium leading-5 text-darkOliveGreen-dark placeholder-darkOliveGreen-200 focus:border-none focus:outline-none focus:ring-0 focus:ring-offset-0 group-hover:bg-darkOliveGreen-150"
                 placeholder="Search Here"
               />
             </div>
@@ -33,12 +34,14 @@ export default function NavBar() {
           {/* Right Side of Navbar */}
           <div className="flex h-[2.5rem] flex-shrink-0 items-center gap-3 lg:gap-6">
             {/* Inbox */}
-            <img src="/inbox-icon.svg" className="h-[1.7rem]" alt="Inbox" />
+            <ReactSVG
+              src="/inbox-icon.svg"
+              className="icon-hover-effect h-[1.7rem] duration-100 active:scale-90"
+            />
             {/* Notification */}
-            <img
+            <ReactSVG
               src="/notification-icon.svg"
-              className="h-[1.7rem]"
-              alt="Notification"
+              className="icon-hover-effect h-[1.7rem] duration-100 active:scale-90"
             />
             {/* Profile */}
             <div className="hidden items-center justify-between gap-2 lg:flex">
@@ -52,15 +55,13 @@ export default function NavBar() {
               </div>
               <img
                 src="/profile-icon.png"
-                className="h-[2.5rem] w-[2.5rem] rounded-[14px] bg-cover"
-                alt="Profile"
+                className="h-[2.5rem] w-[2.5rem] rounded-[14px]  bg-cover"
               />
             </div>
             {/* Settings */}
-            <img
+            <ReactSVG
               src="/settings-icon.svg"
-              className="hidden h-[1.7rem] lg:block"
-              alt="Settings"
+              className="icon-hover-effect hidden h-[1.7rem] duration-100 active:scale-90 lg:block"
             />
           </div>
         </div>

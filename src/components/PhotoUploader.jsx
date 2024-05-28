@@ -29,7 +29,7 @@ const PhotoUploader = () => {
             setPreviewUrl(null);
             setSelectedFile(null);
           }}
-          className="absolute right-0.5 top-0.5 z-50 block h-6 w-6 -translate-y-1/2 translate-x-1/2 transform bg-[url('/red-cross.svg')] "
+          className="absolute right-0.5 top-0.5 z-50 block h-6 w-6 -translate-y-1/2 translate-x-1/2 transform bg-[url('/red-cross.svg')]"
         />
       )}
       <div

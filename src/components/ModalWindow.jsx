@@ -54,12 +54,16 @@ export default function ModalWindow({ open, setOpen }) {
                     <>
                       <button
                         onClick={() => setIsAssigned(true)}
-                        className="mx-auto box-border rounded-xl bg-darkOliveGreen-dark px-16   py-[15px]  text-center text-base font-medium text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] md:w-[23.4rem]"
+                        className="hover:bg-darkOliveGreen-800 mx-auto box-border rounded-xl bg-darkOliveGreen-dark   px-16  py-[15px] text-center text-base font-medium text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] duration-100 active:scale-95 md:w-[23.4rem]
+                        "
                       >
                         Assign as Caregiver
                       </button>
 
-                      <button className="mx-auto box-border rounded-xl border-[1.5px] border-solid  border-darkOliveGreen-dark px-16  py-[15px]  text-center text-base font-semibold text-darkOliveGreen-dark shadow-md md:w-[23.4rem]">
+                      <button
+                        className="hover:bg-whitesmoke-100 mx-auto box-border rounded-xl border-[1.5px]  border-solid border-darkOliveGreen-dark  px-16  py-[15px] text-center text-base font-semibold text-darkOliveGreen-dark shadow-md duration-100 active:scale-95 md:w-[23.4rem]
+"
+                      >
                         View Profile
                       </button>
                     </>
@@ -67,7 +71,8 @@ export default function ModalWindow({ open, setOpen }) {
                   {isAssigned && (
                     <button
                       onClick={() => setOpen(false)}
-                      className="mx-auto box-border rounded-xl border-[1.5px] border-solid  border-darkOliveGreen-dark px-16  py-[15px]  text-center text-base font-semibold text-darkOliveGreen-dark shadow-md md:w-[23.4rem]"
+                      className="hover:bg-whitesmoke-100 mx-auto box-border rounded-xl border-[1.5px]  border-solid border-darkOliveGreen-dark  px-16  py-[15px] text-center text-base font-semibold text-darkOliveGreen-dark shadow-md duration-100 active:scale-95 md:w-[23.4rem]
+                      "
                     >
                       Go back
                     </button>

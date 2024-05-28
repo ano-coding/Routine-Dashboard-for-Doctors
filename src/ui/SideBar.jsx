@@ -53,10 +53,13 @@ const SideBar = () => {
         <span className="font-poppins text-[15px] font-medium leading-[22.5px] text-darkslategray-dark">
           Main
         </span>
-        <nav className="flex flex-col gap-[1.4rem] py-1">
+        <nav className="flex flex-col gap-[1rem] py-1">
           {sidebarItems.map((item) => (
-            <div key={item.name} className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center  justify-center rounded-lg bg-darkslateblue-light">
+            <div
+              key={item.name}
+              className="mr-2 flex items-center gap-3 rounded-lg py-1 transition-all duration-200 hover:bg-neutral-100"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-darkslateblue-light">
                 <img
                   className="h-[21px]"
                   alt={item.name}
