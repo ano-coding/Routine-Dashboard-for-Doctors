@@ -15,10 +15,15 @@ import ReminderChannel from "./ui/ReminderChannel";
 import AssignCaregiver from "./ui/AssignCaregiver";
 import RoutineDetails from "./ui/RoutineDetails";
 import AddReminder from "./ui/AddReminder";
+import SidebarToggleProvider from "./context/SidebarToggleContext";
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: (
+      <SidebarToggleProvider>
+        <AppLayout />
+      </SidebarToggleProvider>
+    ),
     errorElement: <Error />,
     children: [
       {

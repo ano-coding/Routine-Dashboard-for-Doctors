@@ -47,7 +47,8 @@ const NavigationButtons = ({ step, setStep }) => {
               if (step > 1) return step - 1;
             })
           }
-          className={`my-10 box-border rounded-xl border-2 border-darkOliveGreen-dark px-5 py-[17px]  text-center  text-base font-semibold text-darkOliveGreen-dark  shadow-sm md:w-[23.4rem] `}
+          className={`my-10 box-border rounded-xl border-2 border-darkOliveGreen-dark px-5 py-[17px]  text-center  text-base font-semibold text-darkOliveGreen-dark  shadow-sm duration-100 hover:bg-whitesmoke-100 active:scale-95 md:w-[23.4rem]
+          `}
         >
           Back
         </button>
@@ -56,7 +57,8 @@ const NavigationButtons = ({ step, setStep }) => {
         onClick={() => {
           if (step < 3) return setStep((step) => step + 1);
         }}
-        className={` my-10 box-border rounded-xl bg-darkOliveGreen-dark px-16   py-[17px]  text-center text-base font-semibold text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] md:w-[23.4rem] `}
+        className={`my-10 box-border rounded-xl
+        bg-darkOliveGreen-dark px-16 py-[17px] text-center text-base   font-semibold  text-white shadow-[0px_4px_14px_rgba(58,_100,_59,_0.25)] duration-100 hover:bg-darkOliveGreen-800 active:scale-95 md:w-[23.4rem] `}
       >
         {`Next (${step}/3)`}
       </button>
